@@ -1,0 +1,30 @@
+{
+  "name": "spotify-compare",
+  "version": "1.0.0",
+  "description": "Compare spotify artists and visualize with d3.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack":"webpack",
+    "babel":"babel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KChan440/spotify-compare.git"
+  },
+  "author": "KumaranC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KChan440/spotify-compare/issues"
+  },
+  "homepage": "https://github.com/KChan440/spotify-compare#readme",
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "webpack": "^1.14.0"
+  }
+}
