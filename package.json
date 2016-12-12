@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack":"webpack",
-    "babel":"babel"
+    "webpack": "webpack",
+    "babel": "babel"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "babel-preset-react": "^6.16.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "redux": "^3.6.0",
     "webpack": "^1.14.0"
   }
 }
