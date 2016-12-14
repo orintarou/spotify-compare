@@ -14,10 +14,10 @@ export default class ArtistData extends Component {
     return (
       <div className="caption">
         {name}
-        <ul>
+        <p>
           {popularity}
           {genre}
-        </ul>
+        </p>
         {link}
       </div>
   );

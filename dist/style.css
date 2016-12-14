@@ -1,15 +1,10 @@
 body {
-  padding-top: 70px;
-  height: 100%;
-  padding-bottom: 40px;
   background-color: black;
-  width:500px;
   text-align:center;
   font-family:Arial, sans-serif;
   font-size: small;
   text-shadow:2px 0 15px #292929;
   letter-spacing:4px;
-  text-decoration:none;
   color:#DDD;
 }
 
@@ -35,6 +30,10 @@ body {
   letter-spacing:4px;
   text-decoration:none;
   color:#DDD;
+}
+
+.container{
+  text-align: center;
 }
 
 .form-control{
