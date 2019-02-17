@@ -3,7 +3,7 @@ import SpotifyApi from '../constants/Spotifier';
 
 
 export function getArtists(name) {
-  SpotifyApi.setAccessToken('BQCwoHdtRMmmj9zdKY4wy4DTjrfY_ZVycyX2Mpovea8GWO1PhiXmKWnvWdJQ2VY9BZ5h7OX6ylSJ1MxQbofynZO7lDTlCnyirNusn1KnspR8iuzdNvSRWoaIakscSGT3_ergMDdX5Fg');
+  SpotifyApi.setAccessToken('BQB_E7t9R1XsCRwWLU4Kfqh2RzYd074V6Dx8CEmgcNdm-YU_Es8cr51CnK5YzTYCbU1ZcB02Y3T9d2YgZXwk2NohYUPjk5_XPBIF4FnWEXUNFtIFuAn_VYo2t7le4_B7qpkMDA3kCZ0');
   return dispatch => {
     dispatch(requestArtists(name));
     return SpotifyApi.searchArtists(name)
@@ -32,7 +32,7 @@ function requestArtists() {
 }
 
 export function getArtistDetails(artistId) {
-  SpotifyApi.setAccessToken('BQCwoHdtRMmmj9zdKY4wy4DTjrfY_ZVycyX2Mpovea8GWO1PhiXmKWnvWdJQ2VY9BZ5h7OX6ylSJ1MxQbofynZO7lDTlCnyirNusn1KnspR8iuzdNvSRWoaIakscSGT3_ergMDdX5Fg');
+  SpotifyApi.setAccessToken('BQB_E7t9R1XsCRwWLU4Kfqh2RzYd074V6Dx8CEmgcNdm-YU_Es8cr51CnK5YzTYCbU1ZcB02Y3T9d2YgZXwk2NohYUPjk5_XPBIF4FnWEXUNFtIFuAn_VYo2t7le4_B7qpkMDA3kCZ0');
   return dispatch => {
     dispatch(requestArtistDetails(artistId));
     return SpotifyApi.getArtist(artistId)
