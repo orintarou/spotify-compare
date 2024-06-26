@@ -1,14 +1,12 @@
 {
   "name": "spotify-compare",
-  "version": "0.0.0",
   "description": "React Redux demo",
   "main": "index.js",
   "scripts": {
     "server": "http-server -p 3000 dist",
     "start": "webpack-dev-server --progress --colors --hot",
-    "build": "Webpack ."
+    "build": "webpack --mode production"
   },
-  "type": "commonjs",
   "keywords": [],
   "author": "Kumaran",
   "license": "ISC",
