@@ -10,6 +10,7 @@ export default class InputField extends Component {
     super(props);
     const {dataType} = this.props;
     this.searchItems = this.searchItems.bind(this, dataType);
+    this.searchItemsKeyPress = this.searchItemsKeyPress.bind(this);
     this.setInputFieldValue = this.setInputFieldValue.bind(this);
   }
 
@@ -27,13 +28,21 @@ export default class InputField extends Component {
     }
   }
 
+  searchItemsKeyPress(e) {
+    e.preventDefault();
+    console.log('press');
+    const value = this.props.value;
+    const {dispatch} = this.props; // Obtain the dispatch function from the store object passed to the App component by the 'Provider' parent component
+    dispatch(getArtists(value));
+  }
+
   render() {
 
     return (
       <div className="container">
         <div>
           <h2>Artist Name</h2>
-            <form type="submit" onSubmit={this.searchItems}>
+            <form type="submit" onSubmit={this.searchItemsKeyPress}>
               <div>
                 <div className="input-group">
                   <input ref="artistName:" type="text" className="form-control" onChange={this.setInputFieldValue} />
