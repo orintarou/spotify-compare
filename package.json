@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "http-server -p 3000 dist",
-    "start": "webpack-dev-server --progress --colors --hot"
+    "start": "webpack-dev-server --progress --colors --hot",
+    "build": "Webpack ."
   },
   "type": "commonjs",
   "keywords": [],

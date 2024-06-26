@@ -37,7 +37,7 @@ export default class InputField extends Component {
               <div>
                 <div className="input-group">
                   <input ref="artistName:" type="text" className="form-control" onChange={this.setInputFieldValue} />
-                  <button className="btn" type="button" onClick={this.searchItems}>enter</button>
+                  <button className="btn" type="button" onClick={this.searchItems}>click enter</button>
                 </div>
               </div>
             </form>
