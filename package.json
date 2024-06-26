@@ -7,6 +7,7 @@
     "server": "http-server -p 3000 dist",
     "start": "webpack-dev-server --progress --colors --hot"
   },
+  "type": "commonjs",
   "keywords": [],
   "author": "Kumaran",
   "license": "ISC",
@@ -37,6 +38,7 @@
     ]
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "babel": "^6.5.2",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
@@ -46,6 +48,7 @@
     "bootstrap": "^3.3.7",
     "history": "^1.17.0",
     "immutable": "^3.8.1",
+    "qs": "^6.12.1",
     "react": "^0.14.8",
     "react-bootstrap": "^0.28.1",
     "react-dom": "^0.14.8",

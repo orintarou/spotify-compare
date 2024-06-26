@@ -50,6 +50,7 @@ function populateArtistData(state, artist) {
 export default function artists(state=initialState, action) {
   switch(action.type) {
     case types.RECEIVE_ARTISTS:
+      console.log('receive');
       return populateArtists(state, action.artists);
 
     case types.REQUEST_ARTISTS:

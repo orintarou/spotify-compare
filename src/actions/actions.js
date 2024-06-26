@@ -2,13 +2,42 @@ import * as types from '../constants/DataTypes';
 import SpotifyApi from '../constants/Spotifier';
 
 
+import axios from 'axios';
+import qs from 'qs';
+
+export function getAuth(){
+    const headers = {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      auth: {
+        username: '02cfa8f9a9d74848b8e65e4ad1cdcd60',
+        password: 'f83043742a1944519a40b81278849db5',
+      },
+    };
+    const data = {
+      grant_type: 'client_credentials',
+    };
+
+    const response = axios.post(
+        'https://accounts.spotify.com/api/token',
+        qs.stringify(data),
+        headers
+      ).then((response) => {
+        SpotifyApi.setAccessToken(response.data.access_token);
+        return response.data.access_token;
+    });
+}
+
+getAuth();
+
 export function getArtists(name) {
-  SpotifyApi.setAccessToken('BQCMsAJ8qi3MdvvpBvYe4yfUX45IpKXzA5bkselMoVXKEdSv_Obvg9xJ6P_1CSBLei24m8KUWC3GtF_6AbGgFUetkeg4zv5LRBkqDtqmANMTWL5TrGfZBvain1UkCq8XT6z_ymrta88');
-  return dispatch => {
-    dispatch(requestArtists(name));
-    return SpotifyApi.searchArtists(name)
-      .then(json => dispatch(receiveArtists(json)))
-  };
+        return dispatch => {
+          dispatch(requestArtists(name));
+          return SpotifyApi.searchArtists(name)
+            .then(json => dispatch(receiveArtists(json)))
+        };
 }
 
 export function setInputFieldValue(name) {
@@ -32,7 +61,6 @@ function requestArtists() {
 }
 
 export function getArtistDetails(artistId) {
-  SpotifyApi.setAccessToken('BQCMsAJ8qi3MdvvpBvYe4yfUX45IpKXzA5bkselMoVXKEdSv_Obvg9xJ6P_1CSBLei24m8KUWC3GtF_6AbGgFUetkeg4zv5LRBkqDtqmANMTWL5TrGfZBvain1UkCq8XT6z_ymrta88');
   return dispatch => {
     dispatch(requestArtistDetails(artistId));
     return SpotifyApi.getArtist(artistId)

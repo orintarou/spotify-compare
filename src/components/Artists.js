@@ -14,6 +14,8 @@ export class Artists extends Component {
 
     let result = [];
 
+    result.push(<InputField dataType="artists" dispatch={dispatch} value={input} />);
+
     //iterate through items
     for (let i = 0; i < items.length; i += numCardsPerRow) {
       let artistCards = items

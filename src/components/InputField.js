@@ -19,6 +19,7 @@ export default class InputField extends Component {
   }
 
   searchItems(itemType) {
+    console.log('press');
     const value = this.props.value;
     const {dispatch} = this.props; // Obtain the dispatch function from the store object passed to the App component by the 'Provider' parent component
     if (itemType === 'artists') {
@@ -32,7 +33,7 @@ export default class InputField extends Component {
       <div className="container">
         <div>
           <h2>Artist Name</h2>
-            <form>
+            <form type="submit" onSubmit={this.searchItems}>
               <div>
                 <div className="input-group">
                   <input ref="artistName:" type="text" className="form-control" onChange={this.setInputFieldValue} />
