@@ -1,7 +1,7 @@
 # spotify-compare
 
-Please checkout the stack trace - from DOM elements to handlers.
-`Then` handlers to their respective actions and into populating state
+checkout the stack trace - from DOM elements then to handlers.
+`Then` handlers to their respective actions - into populating state
 
 To run:
 ```
